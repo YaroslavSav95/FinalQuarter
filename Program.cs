@@ -1,5 +1,8 @@
-﻿string[]arrayOne=new string[5]{"array","5","ten","11","rock-n-roll"};
+﻿Console.Write("Сколько элементов в массиве? ");
+int N = int.Parse(Console.ReadLine());
+string[]arrayOne=new string[N];
 string[]arrayTwo=new string[arrayOne.Length];
+Enter(arrayOne);
 ChangeArray(arrayOne,arrayTwo);
 Print(arrayTwo);
 void ChangeArray(string[]arrayOne,string[]arrayTwo)
@@ -21,4 +24,12 @@ void Print(string[]array)
         Console.Write($"{array[i]} ");
     }
     Console.WriteLine();
+}
+void Enter(string[]arrayOne)
+{
+    for (int i=0;i<arrayOne.Length;i++)
+    {
+        Console.Write("Заполните массив. ");
+        arrayOne[i]= Console.ReadLine();
+    }
 }
